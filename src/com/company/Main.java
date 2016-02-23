@@ -12,8 +12,22 @@ import static java.lang.System.*;
 public class Main {
 
     public static void main(String[] args) {
-        Test test = new WordSearch();
+        Test test = new VerifyPreorderSerialization();
         test.execute();
+    }
+
+    private static void insertionSort(int[] nums){
+
+        for(int i=1; i<nums.length; i++){
+            int j = i-1, tmp = nums[i];
+            while(j>=0 && nums[j] > tmp){
+                nums[j+1] = nums[j];
+                j--;
+            }
+
+            nums[j+1] = tmp;
+        }
+
     }
 
     static private int findMin(int[] num) {
@@ -778,23 +792,4 @@ public class Main {
         return builder.toString();
     }
 
-    /*
-        ArrayList<Integer> sublist1 = new ArrayList<Integer>();
-        ArrayList<Integer> sublist2 = new ArrayList<Integer>();
-        ArrayList<Integer> sublist3 = new ArrayList<Integer>();
-
-        sublist1.add(-1);
-        sublist2.add(2);
-        sublist2.add(3);
-        sublist3.add(-10);
-        sublist3.add(8);
-        sublist3.add(3);
-
-        ArrayList<ArrayList<Integer>> list = new ArrayList<ArrayList<Integer>>();
-        list.add(sublist1);
-        list.add(sublist2);
-        list.add(sublist3);
-
-        System.out.println(minimumTotal(list));
-        */
 }

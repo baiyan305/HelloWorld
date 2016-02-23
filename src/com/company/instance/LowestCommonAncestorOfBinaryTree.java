@@ -13,8 +13,6 @@ public class LowestCommonAncestorOfBinaryTree implements Test{
 
     }
 
-    private TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q){
 
-    }
 
 }
